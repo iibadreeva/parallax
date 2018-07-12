@@ -17,13 +17,13 @@ gulp.task('server', function() {
         open: false,
         notify: false,
         server: {
-            baseDir: ".",
+            baseDir: "app",
         }
     });
 });
 
 gulp.task('sass', () => {
-    return gulp.src('./source/sass/main.scss')
+    return gulp.src('app/source/sass/main.scss')
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sassGlob())
@@ -38,14 +38,14 @@ gulp.task('sass', () => {
         // }))
         // .pipe(csso())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./css/'))
+        .pipe(gulp.dest('app/css/'))
         .pipe(reload({stream : true}));
 });
 
 gulp.task('pug', () => {
     // let locals = require('./content.json');
 
-    gulp.src('source/pug/index.pug')
+    gulp.src('app/source/pug/index.pug')
     .pipe(plumber())
     .pipe(pug({
         // locals : locals
@@ -56,8 +56,8 @@ gulp.task('pug', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('source/pug/**/*.pug', ['pug']);
-    gulp.watch('source/sass/**/*.scss', ['sass']);
+    gulp.watch('app/source/pug/**/*.pug', ['pug']);
+    gulp.watch('app/source/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'pug', 'server', 'watch']);
+gulp.task('default', ['sass', 'server', 'watch']);
