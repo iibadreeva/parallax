@@ -25,7 +25,7 @@
   }
 
   @include phones {
-    animation: bg 850s linear infinite;
+    animation: bg2 850s linear infinite;
   }
 
   &__least {
@@ -54,7 +54,7 @@
     }
 
     @include phones {
-      background: yellow;
+      background: white;
     }
   }
 
@@ -83,6 +83,20 @@
   to {
     //background-position: bottom right;
     background-position: 3000% 0;
+    //transform: translateX(-3056px);
+  }
+}
+
+@keyframes bg2 {
+  from {
+    //background-position: bottom left;
+    background-position: 0 0;
+    //transform: translateX(0);
+  }
+
+  to {
+    //background-position: bottom right;
+    background-position: 300% 0;
     //transform: translateX(-3056px);
   }
 }
