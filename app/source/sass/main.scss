@@ -27,5 +27,12 @@
 	}
 }
 
+@mixin phonesV {
+	@media only screen and (max-device-width: 768px) {
+		@content;
+	}
+}
+
+
 @import "layout/setups";
 @import "sections/**/*.scss";

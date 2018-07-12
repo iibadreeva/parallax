@@ -25,7 +25,11 @@
   }
 
   @include phones {
-    animation: bg2 2850s linear infinite;
+    animation: bg 850s linear infinite;
+  }
+
+  @include phonesV {
+    animation: bgMb 2850s linear infinite;
   }
 
   &__least {
@@ -37,25 +41,25 @@
     bottom: 0;
     left: 0;
     background: url("../images/least.png") no-repeat 0 100% /contain;
-    @include biger {
-      background: #000;
-    }
-
-    @include big {
-      background: red;
-    }
-
-    @include average {
-       background: green;
-    }
-
-    @include tablets {
-      background: blue;
-    }
-
-    @include phones {
-      background: gray;
-    }
+    //@include biger {
+    //  background: #000;
+    //}
+    //
+    //@include big {
+    //  background: red;
+    //}
+    //
+    //@include average {
+    //   background: green;
+    //}
+    //
+    //@include tablets {
+    //  background: blue;
+    //}
+    //
+    //@include phones {
+    //  background: gray;
+    //}
   }
 
   &__birds {
@@ -81,23 +85,17 @@
   }
 
   to {
-    //background-position: bottom right;
     background-position: 3000% 0;
-    //transform: translateX(-3056px);
   }
 }
 
-@keyframes bg2 {
+@keyframes bgMb {
   from {
-    //background-position: bottom left;
     background-position: 0 0;
-    //transform: translateX(0);
   }
 
   to {
-    //background-position: bottom right;
     background-position: 300% 0;
-    //transform: translateX(-3056px);
   }
 }
 
