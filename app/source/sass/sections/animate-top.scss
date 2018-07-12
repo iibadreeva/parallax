@@ -76,13 +76,13 @@
 @keyframes bg {
   from {
     //background-position: bottom left;
-    background-position: 0;
+    background-position: 0 0;
     //transform: translateX(0);
   }
 
   to {
     //background-position: bottom right;
-    background-position: 3000%;
+    background-position: 3000% 0;
     //transform: translateX(-3056px);
   }
 }
