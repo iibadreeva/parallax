@@ -1,0 +1,108 @@
+.butterfly {
+  left: 30vw;
+  top: calc(100% - 10vh);
+  width: 5vw;
+  height: 10vh;
+  //transform: rotate(-120deg)  translate(30px, 60px) scale(0.8, 0.8);
+  transform-origin: center center;
+  position: relative;
+  //margin-top: -5vh;
+
+  animation-name: loop2;
+  animation-duration: 18.9s;
+  animation-iteration-count: infinite;
+  //animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+
+  &__right {
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/wing.png);
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: 100% 50%;
+    transform: rotate3d(0, 0, 0, 180deg);
+    transform-origin: center right;
+    animation-name: rightwingani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  &__left {
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/wing.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 50%;
+    transform-origin: top right;
+    animation-name: leftwingani;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes rightwingani {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  }
+  30% {
+    -webkit-transform: rotate3d(0, 1, 0, 100deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  }
+  70%{
+    -webkit-transform: rotate3d(0, 1, 0, 100deg);
+  }
+  to{
+    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+@keyframes leftwingani {
+  from {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+  }
+  30%  {
+    -webkit-transform: rotate3d(0, 1, 0, 80deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 0deg);
+  }
+  70%{
+    -webkit-transform: rotate3d(0, 1, 0, 80deg);
+  }
+  to{
+    -webkit-transform: rotate3d(0, 1, 0, 00deg);
+  }
+}
+
+
+//
+//@keyframes loop2 {
+//  0% {transform: translate(0,0);}
+//  25% {transform :rotate(-10deg) translate(-150px,-150px);}
+//  50% {transform: rotate(-40deg) translate(-300px,-400px);}
+//  75% {transform: rotate(-10deg) translate(-350px,-0px);}
+//  100% {transform: translate(0,0);}
+//}
+//
+
+
+@keyframes loop2 {
+  0% {transform: scale(1) translate(0,0);}
+  25% {transform: scale(0.8) rotate(-10deg) translate(-10vh,-1vw);}
+  50% {transform: scale(0.6) rotate(-40deg) translate(-50vh,-50vw);}
+  50% {transform: scale(0.6) rotate(-40deg) translate(-80vh,-90vw);}
+  75% {transform: scale(0.5) rotate(-10deg) translate(-9350px,-0vw);}
+  100% {transform: scale(1) translate(0,0);}
+}

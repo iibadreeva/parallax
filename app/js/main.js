@@ -29,7 +29,8 @@ var parallax = (function () {
 
 var svgScroll = (function () {
     var svg = document.querySelector('.flower__svg'),
-        svgPath = document.querySelectorAll('.flower__group'),
+        svgPath = document.querySelector('.flower__group'),
+        body = document.body,
         windowMargin = window.innerHeight / 3,
         svgCoord = getCoords(svg),
         svgPosCoord = svgCoord.top;
@@ -40,14 +41,14 @@ var svgScroll = (function () {
                 pixelsElapsed = svgPosCoord - wScroll,
                 percentsElapsed = 100 - Math.ceil(pixelsElapsed / windowMargin * 100),
                 percentsDraw = 1200 / 100 * percentsElapsed;
-
             if (startAnimate >= 0) {
                 var drawAmount = 1200 - percentsDraw;
 
                 if (drawAmount > 0) {
-                    svgPath.forEach(function (item) {
-                        item.style.strokeDashoffset = drawAmount;
-                    });
+                    svgPath.style.strokeDashoffset = drawAmount;
+                    svgPath.style.strokeDasharray = 1200
+                }else {
+                    svgPath.style.strokeDasharray = 0
                 }
             }
         }

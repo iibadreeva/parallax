@@ -1,0 +1,19 @@
+.flower {
+  height: 100vh;
+
+  &__svg {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    //width: 30%;
+    height: 100%;
+    stroke: #455a64;
+    stroke-width: 2px;
+    fill: none;
+  }
+
+  &__group {
+    stroke-dasharray: 1200;
+    stroke-dashoffset: 1200;
+  }
+}

@@ -2,9 +2,9 @@
   height: 100vh;
   //background: url("../images/animate-top.jpg?v=6") repeat-x bottom left;
   background: #ccc url("../images/animate-top.jpg?v=6") repeat-x 50% fixed;
-  //width: 10920px;
   width: 32900%;
   position: relative;
+  overflow: hidden;
 
   //animation: bg 500s linear infinite;
 
@@ -41,25 +41,6 @@
     bottom: 0;
     left: 0;
     background: url("../images/least.png") no-repeat 0 100% /contain;
-    //@include biger {
-    //  background: #000;
-    //}
-    //
-    //@include big {
-    //  background: red;
-    //}
-    //
-    //@include average {
-    //   background: green;
-    //}
-    //
-    //@include tablets {
-    //  background: blue;
-    //}
-    //
-    //@include phones {
-    //  background: gray;
-    //}
   }
 
   &__birds {
@@ -70,8 +51,8 @@
     left: 75vw;
     top: 15%;
     opacity: 0.7;
-    animation: birds 25s linear infinite;
-    //animation: birds 25s ease-in-out infinite;
+    //animation: birds 25s linear infinite;
+    animation: birds 25s ease-in-out infinite;
   }
 
 
@@ -79,9 +60,7 @@
 
 @keyframes bg {
   from {
-    //background-position: bottom left;
     background-position: 0 0;
-    //transform: translateX(0);
   }
 
   to {
@@ -101,12 +80,9 @@
 
 @keyframes birds {
   0%   { transform: rotate(0deg) translateX(0) translateY(0px); }
-  20%  { transform: rotate(-23deg) translateX(-56px) translateY(-26px); }
-  40%  { transform: rotate(-23deg) translateX(-156px) translateY(-56px); }
-  60%  { transform: rotate(-13deg) translateX(-256px) translateY(-106px); }
-  80%  { transform: rotate(-0deg) translateX(-156px) translateY(-46px); }
+  20%  { transform: scale(0.7) rotate(-23deg) translateX(-156px) translateY(-26px); }
+  40%  { transform: rotate(-23deg) translateX(-356px) translateY(-56px); }
+  60%  { transform: scale(1.7) rotate(-13deg) translateX(-456px) translateY(-106px); }
+  80%  { transform: rotate(-0deg) translateX(-256px) translateY(-96px); }
   100% { transform: rotate(0deg) translateX(0px) translateY(0px); }
 }
-
-
-
