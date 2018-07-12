@@ -6,24 +6,26 @@
   width: 32900%;
   position: relative;
 
+  //animation: bg 500s linear infinite;
+
   @include biger {
-    animation: bg 10s linear infinite;
+    animation: bg 310s linear infinite;
   }
 
   @include big {
-    animation: bg 20s linear infinite;
+    animation: bg 520s linear infinite;
   }
 
   @include average {
-    animation: bg 60s linear infinite;
+    animation: bg 660s linear infinite;
   }
 
   @include tablets {
-    animation: bg 70s linear infinite;
+    animation: bg 770s linear infinite;
   }
 
   @include phones {
-    animation: bg 150s linear infinite;
+    animation: bg 850s linear infinite;
   }
 
   &__least {
@@ -35,6 +37,25 @@
     bottom: 0;
     left: 0;
     background: url("../images/least.png") no-repeat 0 100% /contain;
+    @include biger {
+      background: #000;
+    }
+
+    @include big {
+      background: red;
+    }
+
+    @include average {
+       background: green;
+    }
+
+    @include tablets {
+      background: blue;
+    }
+
+    @include phones {
+      background: yellow;
+    }
   }
 
   &__birds {
@@ -54,12 +75,14 @@
 
 @keyframes bg {
   from {
-    background-position: bottom left;
+    //background-position: bottom left;
+    background-position: 0;
     //transform: translateX(0);
   }
 
   to {
-    background-position: bottom right;
+    //background-position: bottom right;
+    background-position: 3000%;
     //transform: translateX(-3056px);
   }
 }
