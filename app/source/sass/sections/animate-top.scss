@@ -25,7 +25,7 @@
   }
 
   @include phones {
-    animation: bg2 850s linear infinite;
+    animation: bg2 5s linear infinite;
   }
 
   &__least {
@@ -54,7 +54,7 @@
     }
 
     @include phones {
-      background: white;
+      background: gray;
     }
   }
 
