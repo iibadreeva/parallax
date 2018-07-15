@@ -81,6 +81,7 @@ function getCoords(elem) {
 
 function loadImage(url, className, img='bg') {
     return new Promise(function (resolve, reject) {
+        console.log(url);
         let image = new Image(200);
         let body = Array.isArray(className) ? document.querySelectorAll(className) : document.querySelector(className);
 
@@ -106,13 +107,13 @@ function loadImage(url, className, img='bg') {
     })
 }
 
-const url1 = "../images/animate-top.jpg",
-      url2 = "../images/least.png",
-      url3 = "../images/wing.png",
-      url4 = "../images/birds.svg",
-      url5 = "../images/butterfly3-rightwing.png",
-      url6 = "../images/butterfly3-leftwing.png",
-      url7 = "../images/butterfly3-body.png";
+const url1 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/animate-top.jpg",
+      url2 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/least.png",
+      url3 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/wing.png",
+      url4 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/birds.png",
+      url5 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/butterfly3-rightwing.png",
+      url6 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/butterfly3-leftwing.png",
+      url7 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/images/butterfly3-body.png";
 
 
 Promise.all([
@@ -127,18 +128,18 @@ Promise.all([
     .then(function () {
     const circle = document.querySelector('.circle'),
           body = document.querySelector('.animate-top'),
-          logo =  document.querySelector('.logo'),
+          // logo =  document.querySelector('.logo'),
           boxes = [
               'animate-top__birds',
               'butterfly',
               'butterfly-two',
-              'animate-top__least'
+              'animate-top__least',
+              'logo'
           ];
 
     body.removeChild(circle);
-    logo.classList.add('active');
+    // logo.classList.add('active');
     for(let i=0; i < boxes.length; i++){
-        // console.log( document.querySelectorAll(`.${boxes[i]}`)[0] )
         document.querySelectorAll(`.${boxes[i]}`)[0].style.display = 'block';
     }
 });

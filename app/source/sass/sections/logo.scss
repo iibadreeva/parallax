@@ -12,12 +12,8 @@
   top: 50%;
   margin-left: -300px;
   margin-top: -50px;
-  transform: translateY(-1000px);
-  //transition: transform 0.5s ease-out;
+  display: none;
 
-  &.active {
-    transform: translateY(0%);
-  }
 
   hgroup {
     position: relative;
