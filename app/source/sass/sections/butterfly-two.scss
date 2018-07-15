@@ -12,6 +12,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   animation-timing-function: ease-out-in;
+  display: none;
 
   &__body {
     position:absolute;

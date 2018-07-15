@@ -1,7 +1,8 @@
 .animate-top {
   height: 100vh;
   //background: url("../images/animate-top.jpg?v=6") repeat-x bottom left;
-  background: #ccc url("../images/animate-top.jpg?v=6") repeat-x 50% fixed;
+  background: linear-gradient(90deg, #00b377, #00d68f) repeat-x 50% fixed;
+  //background-image: url("../images/animate-top.jpg?v=6");
   width: 32900%;
   position: relative;
   overflow: hidden;
@@ -40,13 +41,17 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: url("../images/least.png") no-repeat 0 100% /contain;
+    display: none;
+    //background: url("../images/least.png") no-repeat 0 100% /contain;
+    background: transparent no-repeat 0 100% /contain;
   }
 
   &__birds {
     width: 15vw;
     height: 19%;
-    background: url("../images/birds.svg") no-repeat 0 50% /contain;
+    display: none;
+    //background: url("../images/birds.svg") no-repeat 0 50% /contain;
+    background: transparent no-repeat 0 50% /contain;
     position: absolute;
     left: 75vw;
     top: 15%;

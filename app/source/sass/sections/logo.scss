@@ -12,6 +12,12 @@
   top: 50%;
   margin-left: -300px;
   margin-top: -50px;
+  transform: translateY(-1000px);
+  //transition: transform 0.5s ease-out;
+
+  &.active {
+    transform: translateY(0%);
+  }
 
   hgroup {
     position: relative;
@@ -32,10 +38,6 @@
   right: 0;
   bottom: 0;
   background: inherit;
-  filter: blur(5px);
-  -webkit-filter: blur(6px);
-  -moz-filter: blur(6px);
-  -o-filter: blur(6px);
-  -ms-filter: blur(6px);
+  filter: blur(6px);
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='6');
 }

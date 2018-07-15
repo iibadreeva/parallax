@@ -36,7 +36,7 @@ gulp.task('sass', () => {
         //     type     :    'px-to-rem',
         //     rootSize  :    16
         // }))
-        // .pipe(csso())
+        .pipe(csso())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('app/css/'))
         .pipe(reload({stream : true}));
@@ -51,7 +51,7 @@ gulp.task('pug', () => {
         // locals : locals
         pretty: true,
     }))
-    .pipe(gulp.dest('.'))
+    .pipe(gulp.dest('./app'))
     .pipe(reload({stream : true}));
 });
 
@@ -60,4 +60,4 @@ gulp.task('watch', () => {
     gulp.watch('app/source/sass/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['sass', 'server', 'watch']);
+gulp.task('default', ['sass', 'server', 'pug', 'watch']);

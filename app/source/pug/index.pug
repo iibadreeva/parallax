@@ -11,18 +11,30 @@ html(lang='ru')
 	body
 		.wrapper
 			.animate-top
+				.circle
+					- for (var i=0; i < 5; i++)
+						.circle__item
+							.circle__inner
 				.logo
 					hgroup
 						h1 LOGO
 						span slogan
 				.animate-top__least
-				.butterfly
 				.animate-top__birds
 
-			.blur__form-wrapper
-				.blur__form
-
-
+				.butterfly
+					.butterfly__left
+					.butterfly__right
+				.butterfly-two
+					.butterfly-two__radial
+						.butterfly-two__body
+							//- img.butterfly-two__img(src="images/butterfly3-body.png")
+						.butterfly-two__leftwing
+							//- img.butterfly-two__img(src="images/butterfly3-leftwing.png")
+						.butterfly-two__rightwing
+							//- img.butterfly-two__img(src="images/butterfly3-rightwing.png")
+			.flower
+				include block/svg.pug
 
 	block content
 	script(src="js/main.js")
