@@ -29,6 +29,7 @@ var parallax = (function () {
 var svgScroll = (function () {
     var svg = document.querySelector('.flower__svg'),
         svgPath = document.querySelector('.flower__group'),
+        flange = document.querySelector('.flange'),
         body = document.body,
         windowMargin = window.innerHeight / 3,
         svgCoord = getCoords(svg),
@@ -47,8 +48,37 @@ var svgScroll = (function () {
                     svgPath.style.strokeDashoffset = drawAmount;
                     svgPath.style.strokeDasharray = 1200
                 }else {
-                    svgPath.style.strokeDasharray = 0
+                    svgPath.style.strokeDasharray = 0;
+                    flange.classList.add('active');
                 }
+            }
+        }
+    }
+}());
+
+var grass = (function () {
+    var grass = document.getElementsByClassName('grass')[0];
+
+    return {
+        drow: function (blade) {
+            let randomHeight =  Math.floor(Math.random() * 100),
+                randomLeft = Math.floor(Math.random() * (window.innerWidth - 8)),
+                randomRotation = Math.floor(Math.random() * 10) - 5;
+
+            blade.style.height = (randomHeight + 100) + 'px';
+            blade.style.zIndex = randomHeight;
+            blade.style.opacity = randomHeight * 0.02;
+            blade.style.left = randomLeft + 'px';
+            blade.style.transform = 'rotate(' + randomRotation + 'deg)';
+        },
+
+        init: function (num) {
+            let numberOfBlades = num / 3;
+            grass.innerHTML = '';
+            for (var i = 0; i < numberOfBlades; i++) {
+                var blade = document.createElement('div');
+                this.drow(blade);
+                grass.appendChild(blade);
             }
         }
     }
@@ -81,7 +111,6 @@ function getCoords(elem) {
 
 function loadImage(url, className, img='bg') {
     return new Promise(function (resolve, reject) {
-        console.log(url);
         let image = new Image(200);
         let body = Array.isArray(className) ? document.querySelectorAll(className) : document.querySelector(className);
 
@@ -128,7 +157,6 @@ Promise.all([
     .then(function () {
     const circle = document.querySelector('.circle'),
           body = document.querySelector('.animate-top'),
-          // logo =  document.querySelector('.logo'),
           boxes = [
               'animate-top__birds',
               'butterfly',
@@ -138,7 +166,6 @@ Promise.all([
           ];
 
     body.removeChild(circle);
-    // logo.classList.add('active');
     for(let i=0; i < boxes.length; i++){
         document.querySelectorAll(`.${boxes[i]}`)[0].style.display = 'block';
     }
@@ -151,3 +178,14 @@ window.onscroll = function () {
     svgScroll.grow(wScroll);
 };
 
+window.addEventListener('load', function () {
+    let width = window.innerWidth;
+
+    grass.init(width);
+})
+
+window.addEventListener('resize', function () {
+    let width = window.innerWidth;
+
+    grass.init(width);
+})

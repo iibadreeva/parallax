@@ -1,5 +1,7 @@
 .flower {
   height: 100vh;
+  min-height: 500px;
+  position: relative;
 
   &__svg {
     display: block;
@@ -10,6 +12,8 @@
     stroke: #455a64;
     stroke-width: 2px;
     fill: none;
+    position: relative;
+    z-index: 3;
   }
 
   &__group {

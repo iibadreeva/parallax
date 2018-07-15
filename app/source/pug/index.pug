@@ -5,6 +5,8 @@ html(lang='ru')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		link(href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300", rel="stylesheet")
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+		link(rel="icon" href="favicon.ico" type="image/x-icon")
 		link(href='css/main.css', rel='stylesheet')
 
 		title Параллакс
@@ -28,13 +30,17 @@ html(lang='ru')
 				.butterfly-two
 					.butterfly-two__radial
 						.butterfly-two__body
-							//- img.butterfly-two__img(src="images/butterfly3-body.png")
 						.butterfly-two__leftwing
-							//- img.butterfly-two__img(src="images/butterfly3-leftwing.png")
 						.butterfly-two__rightwing
-							//- img.butterfly-two__img(src="images/butterfly3-rightwing.png")
 			.flower
+				.flange
+					.flange__petal-wrapper
+						- for (var i=0; i < 12; i++)
+							.flange__petal
+					.flange__core
+
 				include block/svg.pug
+				.grass
 
 	block content
 	script(src="js/main.js")

@@ -1,0 +1,24 @@
+.grass {
+
+  div {
+    animation:breeze 8s cubic-bezier(.8,-0.5,.25,1.5) infinite;
+    background-color:#0b0;
+    border-right:solid 3px #0c0;
+    border-top-right-radius:100%;
+    bottom:0;
+    position:absolute;
+    transform-origin:bottom;
+    transition:all 100ms ease-in-out;
+    width:3px;
+  }
+
+}
+
+@keyframes breeze {
+  0%, 100% {
+    transform:auto;
+  }
+  50% {
+    transform:rotate(5deg);
+  }
+}
