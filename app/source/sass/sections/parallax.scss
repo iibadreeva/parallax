@@ -1,0 +1,109 @@
+.parallax {
+  overflow: hidden;
+  margin-bottom: -10px;
+
+  &__inner {
+    position: relative;
+    top: -0px;
+    left: -5px;
+    height:100%;
+  }
+
+  &__hidden {
+    opacity: 0;
+    z-index: 5;
+    position: relative;
+    width:100%;
+    min-height: 400px;
+  }
+
+  &__layer {
+    height: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  &__bg {
+    height: 100%;
+  }
+
+  &__circle-1 {
+    left: 65vw;
+    position: absolute;
+    opacity: 0.8;
+    bottom: 1vh;
+    height: 20%;
+
+    @include average {
+      height: 18%;
+    }
+
+    @include tablets {
+      left:50vw;
+    }
+  }
+
+  &__circle-2 {
+    left: 75vw;
+    position: absolute;
+    opacity: 0.6;
+    bottom: 15vh;
+    height: 20%;
+
+    @include average {
+      height: 18%;
+      bottom: 13vh;
+    }
+
+    @include tablets {
+      left:65vw;
+    }
+  }
+
+  &__circle-3 {
+    left: 84vw;
+    position: absolute;
+    opacity: 0.8;
+    bottom: 4vh;
+    height: 20%;
+
+    @include average {
+      height: 18%;
+    }
+
+    @include tablets {
+      left:80vw;
+    }
+  }
+
+  &__butterfly {
+    left: 10vw;
+    position: absolute;
+    top: 10vh;
+  }
+
+  &__bg-border {
+    left: 35vw;
+    position: absolute;
+    top: 15vh;
+    height: 15%;
+
+    @include average {
+      height: 12%;
+      top: 12vh;
+    }
+  }
+
+  &__brights {
+    left: 0vw;
+    position: absolute;
+    bottom: 0vh;
+  }
+
+  &__bright {
+    left: 20vw;
+    position: absolute;
+    top: 30vh;
+    height: 10%;
+  }
+}

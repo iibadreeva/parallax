@@ -38,9 +38,29 @@ html(lang='ru')
 						- for (var i=0; i < 12; i++)
 							.flange__petal
 					.flange__core
-
 				include block/svg.pug
 				.grass
+
+			.parallax
+				.parallax__inner
+					img(src="images/bg.jpg", class="parallax__hidden")
+					.parallax__layer
+						img(src="images/bg.jpg", class="parallax__bg")
+					.parallax__layer
+						img(src="images/brights.png", class="parallax__brights")
+					.parallax__layer
+						img(src="images/bg-border.png", class="parallax__bg-border")
+					.parallax__layer
+						img(src="images/bright.png", class="parallax__bright")
+					.parallax__layer
+						img(src="images/circle.png", class="parallax__circle-1")
+					.parallax__layer
+						img(src="images/circle.png", class="parallax__circle-2")
+					.parallax__layer
+						img(src="images/circle.png", class="parallax__circle-3")
+					.parallax__layer
+						img(src="images/butterfly_bottom.png", class="parallax__butterfly")
+					
 
 	block content
 	script(src="js/main.js")
