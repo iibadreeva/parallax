@@ -34,7 +34,7 @@
   //}
 
   &__image {
-    background: url("../images/animate-top.jpg?v=6") repeat-x bottom left;
+    background: linear-gradient(90deg, #00b377, #00d68f) repeat-x bottom left;
     animation: bg 150s linear infinite;
     width:100%;
     height:100%;

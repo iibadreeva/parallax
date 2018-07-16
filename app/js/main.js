@@ -172,7 +172,7 @@ const url1 = "https://raw.githubusercontent.com/iibadreeva/parallax/master/app/i
 
 
 Promise.all([
-    loadImage(url1, '.animate-top'),
+    loadImage(url1, '.animate-top__image'),
     loadImage(url2, '.animate-top__least'),
     loadImage(url4, '.animate-top__birds'),
     loadImage(url3, ['.butterfly__left','.butterfly__right']),
