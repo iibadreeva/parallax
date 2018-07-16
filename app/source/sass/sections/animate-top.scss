@@ -1,36 +1,46 @@
 .animate-top {
   height: 100vh;
   //background: url("../images/animate-top.jpg?v=6") repeat-x bottom left;
-  background: linear-gradient(90deg, #00b377, #00d68f) repeat-x 50% fixed;
+  //background: linear-gradient(90deg, #00b377, #00d68f) repeat-x 50% fixed;
   //background-image: url("../images/animate-top.jpg?v=6");
   width: 32900%;
   position: relative;
   overflow: hidden;
 
-  //animation: bg 500s linear infinite;
 
-  @include biger {
-    animation: bg 310s linear infinite;
-  }
 
-  @include big {
-    animation: bg 520s linear infinite;
-  }
+  //@include biger {
+  //  animation: bg 310s linear infinite;
+  //}
+  //
+  //@include big {
+  //  animation: bg 520s linear infinite;
+  //}
+  //
+  //@include average {
+  //  animation: bg 660s linear infinite;
+  //}
+  //
+  //@include tablets {
+  //  animation: bg 770s linear infinite;
+  //}
+  //
+  //@include phones {
+  //  animation: bg 850s linear infinite;
+  //}
+  //
+  //@include phonesV {
+  //  animation: bgMb 2850s linear infinite;
+  //}
 
-  @include average {
-    animation: bg 660s linear infinite;
-  }
-
-  @include tablets {
-    animation: bg 770s linear infinite;
-  }
-
-  @include phones {
-    animation: bg 850s linear infinite;
-  }
-
-  @include phonesV {
-    animation: bgMb 2850s linear infinite;
+  &__image {
+    background: url("../images/animate-top.jpg?v=6") repeat-x bottom left;
+    animation: bg 150s linear infinite;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__least {
@@ -65,11 +75,13 @@
 
 @keyframes bg {
   from {
-    background-position: 0 0;
+    //background-position: 0 0;
+    transform: translateX(0);
   }
 
   to {
-    background-position: 3000% 0;
+    //background-position: 3000% 0;
+    transform: translateX(-3056px);
   }
 }
 

@@ -11,7 +11,7 @@
 
   &__hidden {
     opacity: 0;
-    z-index: 5;
+    z-index: 0;
     position: relative;
     width:100%;
     min-height: 400px;
@@ -91,6 +91,10 @@
     @include average {
       height: 12%;
       top: 12vh;
+    }
+
+    @include phones {
+      height: 10%;
     }
   }
 
